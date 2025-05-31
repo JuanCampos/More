@@ -1,0 +1,111 @@
+<!-- I have already made navigation bar so please watch part 1 of this series I am just going to copy all the code  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo TiendaMore</title>
+
+    <!-- adding css  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- about css  -->
+    <link rel="stylesheet" href="./css/productos.css">
+
+    <!-- mediaQuery css  -->
+    <link rel="stylesheet" href="./css/MediaQuery.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="/img/logo.png" style="width: 200px;"></a>
+        <div class="menuToggle"></div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./index.html">Más</a></li>
+                <li><a href="./productos.html">Catálogo</a></li>
+                <li><a href="./contact.html">Contactame</a></li>
+                <li><a href="https://wa.me/+5491168683351?text=Hola%20More%20quiero%20información%20sobre:%20" id="NavNum">11 6868-3351</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sectionFirst">
+        <!-- transparent Img -->
+        <section class="transform-img">
+            <img src="./img/background180.svg" alt="">
+        </section>
+    </section>
+
+    <div class="container">
+        <div class="title">Catálogo</div>
+        <div class="listProduct"></div>
+    </div>
+<div class="beforefooter">
+        <div class="box">
+            <div class="logo"><a href="#" class="logo"><img src="/img/logo.png" style="width: 200px;"></a></div>
+            <p class="para">Recuerden, al encargar puede ser que no haya stock por lo tanto
+                habrá días de demora en las entregas. Al haber stock se realiza punto de encuentro
+                para hacer la entrega del producto adquirido.
+            </p>
+
+            <div class="bf-text">Dejame un comentario :)</div>
+
+            <div class="subscribe">
+                <input type="text" name="Comentario-Nuevo" placeholder="Ejemplo: Muy buena atención" id="">
+                <button class="btn">Enviar</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="bf-text">Enlaces rápidos</div>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./index.html">Más</a></li>
+                <li><a href="./productos.html">Catálogo</a></li>
+                <li><a href="./contact.html">Contactame</a></li>
+            </ul>
+
+
+        </div>
+    <!-- footer  -->
+    <footer>
+        <div class="fbox">Copyright &copy; 2025 TiendaMore</div>
+        <div class="fbox">By: <a href="https://portafolios-juan.netlify.app"
+                style="text-decoration: none; color: #fff;">Juan Campos</a></div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    
+        <script>
+            let products = null;
+            fetch('/js/products.json')
+                .then(response => response.json())
+                .then(data => {
+                    products = data;
+                    console.log(products);
+                    addDataToHTML();
+                })
+            let listProduct = document.querySelector('.listProduct');
+            function addDataToHTML() {
+                products.forEach(product => {
+                    let newProduct = document.createElement('a');
+                    newProduct.href = 'detail.html?id=' + product.id;
+                    newProduct.classList.add('item');
+                    newProduct.innerHTML = `
+                        <img src="${product.image}">
+                        <h2>${product.name}</h2>
+                        <div class="price">${product.price}</div>
+                    `;
+
+                    listProduct.appendChild(newProduct);
+                })
+            }
+        </script>
+
+</body>
+
+</html>
