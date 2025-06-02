@@ -1,51 +1,37 @@
 [
     {
         "id": 1,
-        "name": "Labial noseque rojo",
-        "price": 200,
+        "name": "Luxury labial 6745 Burgundy 4gr.",
+        "price": 7900,
         "image": "img/1.png",
-        "description": "LAbia rojo perfecto para salidas y no se que más poner, creo que esta quedando bien"
+        "description": "Realza tu belleza con el Luxury Labial Larga Duración Burgundy, una combinación perfecta de color intenso y cuidado labial. Enriquecido con colágeno y ácido hialurónico, este labial no solo proporciona una cobertura duradera, sino que también hidrata y rellena los labios, manteniéndolos suaves y saludables. Su fórmula avanzada previene la resequedad y las líneas finas, brindando una apariencia fresca y rejuvenecida. Disfruta de un tono sofisticado y elegante, ideal para cualquier ocasión."
     },
     {
         "id": 2,
-        "name": "Labial noseque rojo",
-        "price": 200,
+        "name": "Luxury Esmalte En Gel Nacarado Up 8 Ml",
+        "price": 3900,
         "image": "img/2.png",
-        "description": "LAbia rojo perfecto para salidas y no se que más poner, creo que esta quedando bien"
+        "description": "Luxury Esmalte En Gel Nacarado Up 8 Ml ofrece un acabado brillante y de alta cobertura, brindando una textura suave y un volumen profesional. Su fórmula de esmalte en gel garantiza un brillo duradero y un acabado nacarado espectacular. No es necesario usar cabina UV, lo que lo convierte en una opción cómoda y rápida. Además, es fácil de remover con quitaesmalte, lo que asegura una aplicación práctica y eficiente. Perfecto para quienes buscan unas uñas de acabado elegante y de larga duración."
     },
     {
         "id": 3,
-        "name": "Labial noseque rojo",
-        "price": 200,
+        "name": "Luxury Esmalte En Gel Red Shine 8 Ml",
+        "price": 3900,
         "image": "img/3.png",
-        "description": "LAbia rojo perfecto para salidas y no se que más poner, creo que esta quedando bien"
+        "description": "Descubre el esmalte en gel que brinda un brillo intenso, una textura uniforme y un acabado profesional sin necesidad de cabina UV. Su fórmula innovadora proporciona cuerpo y volumen, logrando un efecto similar al de un esmalte semipermanente. Con alto poder cubritivo y una aplicación sencilla, se remueve fácilmente con quitaesmalte, permitiendo cambiar de look sin esfuerzo. Ideal para quienes buscan una manicura duradera y de calidad profesional desde casa."
     },
     {
         "id": 4,
-        "name": "Labial noseque rojo",
-        "price": 200,
+        "name": "Bodybell Crema para Manos 60 Gr",
+        "price": 5900,
         "image": "img/4.png",
-        "description": "LAbia rojo perfecto para salidas y no se que más poner, creo que esta quedando bien"
+        "description": "Bodybell Crema para Manos es la solución ideal para manos secas y cansadas. Su fórmula suave con Hydraskin proporciona alta humectación e hidratación instantánea, dejándolas suaves y renovadas. Además, su deliciosa fragancia las acompaña todo el día, manteniendo tus manos cuidada y con un aspecto saludable. ¡Dale a tus manos el cuidado diario que se merecen!"
     },
     {
         "id": 5,
-        "name": "Labial noseque rojo",
-        "price": 200,
+        "name": "Bodybell Body Lotion 300 Ml",
+        "price": 11000,
         "image": "img/5.png",
-        "description": "LAbia rojo perfecto para salidas y no se que más poner, creo que esta quedando bien"
-    },
-    {
-        "id": 6,
-        "name": "Labial noseque rojo",
-        "price": 200,
-        "image": "img/6.png",
-        "description": "LAbia rojo perfecto para salidas y no se que más poner, creo que esta quedando bien"
-    },
-    {
-        "id": 7,
-        "name": "Labial noseque rojo",
-        "price": 200,
-        "image": "img/7.png",
-        "description": "LAbia rojo perfecto para salidas y no se que más poner, creo que esta quedando bien"
+        "description": "Bodybell Body Lotion 300 ml es una loción hidratante liviana y suave que proporciona una sensación de confort al instante. Gracias a su fórmula con Hydraskin, protege y restaura la barrera natural de la piel. Ideal para uso diario, mantiene el equilibrio de la piel frente al estrés ambiental, brindando elasticidad y hidrata profundamente. Un cuidado completo que mejora la función barrera de la epidermis."
     }
 ]
