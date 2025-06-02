@@ -23,10 +23,10 @@
         <nav>
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./index.html">Más</a></li>
                 <li><a href="./productos.html">Catálogo</a></li>
                 <li><a href="./contact.html">Contactame</a></li>
-                <li><a href="https://wa.me/+5491168683351?text=Hola%20More%20quiero%20información%20sobre:%20" id="NavNum">11 6868-3351</a></li>
+                <li><a href="https://wa.me/+5491168683351?text=Hola%20More%20quiero%20información%20sobre:%20"
+                        id="NavNum">11 6868-3351</a></li>
             </ul>
         </nav>
     </header>
@@ -49,18 +49,7 @@
                 <h1 class="name"></h1>
                 <div class="price"></div>
                 <div class="buttons">
-                    <a href="">Comprar</a>
-                    <a href="">
-                        Agregar a la lista
-                        <span>
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
-                            </svg>
-                        </span>
-                    </a>
+                    <a href="#" id="btnEncargar" target="_blank">Encargar</a>
                 </div>
                 <div class="description"></div>
             </div>
@@ -68,6 +57,36 @@
         <div class="title">Producto similar</div>
         <div class="listProduct"></div>
     </div>
+    
+    <!-- beforefooter  -->
+    <div class="beforefooter">
+        <div class="box">
+            <div class="logo"><a href="#" class="logo"><img src="/img/logo.png" style="width: 200px;"></a></div>
+            <p class="para">Recuerden, al encargar puede ser que no haya stock por lo tanto
+                habrá días de demora en las entregas. Al haber stock se realiza punto de encuentro
+                para hacer la entrega del producto adquirido.
+            </p>
+
+            <div class="bf-text">Dejame un comentario :)</div>
+
+            <div class="subscribe">
+                <input type="text" name="Comentario-Nuevo" placeholder="Ejemplo: Muy buena atención" id="">
+                <button class="btn">Enviar</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="bf-text">Enlaces rápidos</div>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./index.html">Más</a></li>
+                <li><a href="./productos.html">Catálogo</a></li>
+                <li><a href="./contact.html">Contactame</a></li>
+            </ul>
+
+
+        </div>
+
 
     <!-- footer  -->
     <footer>
@@ -103,18 +122,28 @@
                 detail.querySelector('.price').innerText = '$' + thisProduct.price,
                 detail.querySelector('.description').innerText = thisProduct.description;
 
-                    (products.filter(value => value.id != productId))
-                    .forEach(product => {
-                        let newProduct = document.createElement('a');
-                        newProduct.href = '/detail.html?id=' + product.id;
-                        newProduct.classList.add('item');
-                        newProduct.innerHTML = `
+            // Generar enlace de WhatsApp
+            let nombreProducto = thisProduct.name;
+            let mensaje = `Hola More te quiero encargar ${nombreProducto}`;
+            let numeroWhatsApp = '5491168683351'; // sin "+" y sin espacios
+            let enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
+            // Asignar al botón
+            let btnEncargar = document.getElementById('btnEncargar');
+            btnEncargar.href = enlaceWhatsApp;
+
+            (products.filter(value => value.id != productId))
+                .forEach(product => {
+                    let newProduct = document.createElement('a');
+                    newProduct.href = '/detail.html?id=' + product.id;
+                    newProduct.classList.add('item');
+                    newProduct.innerHTML = `
                         <img src="${product.image}">
                         <h2>${product.name}</h2>
                         <div class="price">${product.price}</div>
                     `;
-                        listProduct.appendChild(newProduct);
-                    })
+                    listProduct.appendChild(newProduct);
+                })
         }
     </script>
 
